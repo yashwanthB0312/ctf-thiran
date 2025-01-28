@@ -23,118 +23,124 @@ body {
 }
 
 /* Navbar */
+/* Transparent Floating Navigation Bar */
 .navbar {
   position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: rgba(18, 18, 18, 0.95); /* Dark background */
-  backdrop-filter: blur(5px);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: transparent; /* Transparent background */
+  padding: 1rem 2rem;
+  border-radius: 12px;
   z-index: 1000;
 }
 
 .nav-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 2rem; /* Spacing between the logo and links */
 }
 
 .nav-logo {
-  font-size: 1.5rem;
-  color: var(--secondary-color);
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle text shadow for contrast */
 }
 
 .nav-links {
-  display: flex;
   list-style: none;
-  gap: 2rem;
-  align-items: center;
+  display: flex;
+  gap: 2rem; /* Space between the links */
+  padding: 0;
+  margin: 0;
 }
 
-.nav-links a {
+.nav-links li a {
+  font-size: 1.2rem;
+  color: #fff;
   text-decoration: none;
-  color: var(--text-color);
   font-weight: 500;
-  transition: color 0.3s;
-  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 20px; /* Rounded corners */
+  transition: all 0.3s ease; /* Smooth transitions for color and background */
+  cursor: pointer; /* Add pointer cursor */
 }
 
-.nav-links a:hover {
-  color: var(--secondary-color);
+.nav-links li a:hover {
+  background: #fff; /* White background on hover */
+  color: #000; /* Text color changes to black */
+  font-weight: bold; /* Make the text bolder */
+  transform: scale(1.1); /* Slight enlargement on hover */
 }
 
+/* Register Button */
 .register-btn {
-  background-color: var(--primary-color);
-  color: var(--white) !important;
-  padding: 0.5rem 1.5rem;
-  border-radius: 5px;
-  transition: background-color 0.3s !important;
+  background: #3498db;
+  padding: 0.7rem 1.5rem;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
+  cursor: pointer; /* Add pointer cursor */
 }
 
 .register-btn:hover {
-  background-color: var(--secondary-color);
-  color: var(--white) !important;
+  background: #1d6fa5;
+  transform: scale(1.1);
 }
 
-/* Hamburger Menu */
+/* Hamburger Icon */
 .hamburger {
-  display: none;
+  display: none; /* Hidden by default for large screens */
   flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
+  cursor: pointer; /* Add pointer cursor */
 }
 
 .hamburger .line {
-  width: 30px;
+  width: 25px;
   height: 3px;
-  background-color: var(--text-color);
-  transition: 0.3s;
+  background-color: #fff;
+  margin: 4px 0;
+  transition: all 0.3s ease-in-out;
 }
 
-.hamburger .line.active {
-  transform: rotate(45deg);
+.hamburger .line.active:nth-child(1) {
+  transform: rotate(45deg) translateY(7px);
 }
 
-.hamburger .line:nth-child(2).active {
+.hamburger .line.active:nth-child(2) {
   opacity: 0;
 }
 
-.hamburger .line:nth-child(3).active {
-  transform: rotate(-45deg);
+.hamburger .line.active:nth-child(3) {
+  transform: rotate(-45deg) translateY(-7px);
 }
 
-/* Media Query for Smaller Screens */
+/* Responsive Design */
 @media (max-width: 768px) {
-  .nav-links {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    background-color: rgba(18, 18, 18, 0.95);
-    flex-direction: column;
+  .nav-content {
+    flex-direction: column; /* Stack logo and links vertically */
     gap: 1rem;
-    padding: 1rem;
-    display: none;
-    transition: 0.3s;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    display: none; /* Hidden by default */
   }
 
   .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links li {
-    text-align: center;
-    width: 100%;
+    display: flex; /* Show when menu is toggled */
   }
 
   .hamburger {
-    display: flex;
+    display: flex; /* Show hamburger icon on small screens */
   }
 }
-
 
 /* Hero Section */
 .hero {
@@ -315,6 +321,59 @@ body {
     font-size: 1.5rem;
   }
 }
+
+.timeline-section {
+  padding: 2rem;
+  background: #1a1a1d;
+  color: #f5f5f5;
+}
+
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.timeline-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.row-1 {
+  flex-direction: row;
+}
+
+.row-2 {
+  flex-direction: row-reverse;
+}
+
+.timeline-icon {
+  font-size: 2rem;
+  background: #4e4e50;
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.timeline-details {
+  max-width: 600px;
+}
+
+.timeline-details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-details span {
+  font-size: 1rem;
+  color: #a5a5a5;
+}
+
+.timeline-details p {
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+
 
 
 /* Footer */

@@ -12,7 +12,7 @@ const ctfEvents = [
     title: "Cryptography",
     difficulty: "Advanced",
     description: "Solve complex cryptographic puzzles and secure communication challenges.",
-    image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7"
+    image: "https://cdn.pixabay.com/photo/2020/01/22/16/31/cyber-security-4785679_1280.png"
   },
   {
     title: "Digital Forensic",
