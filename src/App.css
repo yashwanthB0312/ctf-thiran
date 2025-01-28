@@ -29,9 +29,12 @@ body {
   top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: transparent; /* Transparent background */
-  padding: 1rem 2rem;
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
+  backdrop-filter: blur(10px); /* Apply blur effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  padding: 0.4rem 1rem;
+  border-radius: 25px; /* Rounded corners */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Optional border */
   z-index: 1000;
 }
 
@@ -78,7 +81,7 @@ body {
 
 /* Register Button */
 .register-btn {
-  background: #3498db;
+  background: #2f85e7;
   padding: 0.7rem 1.5rem;
   color: #fff;
   border-radius: 8px;
@@ -120,25 +123,48 @@ body {
 .hamburger .line.active:nth-child(3) {
   transform: rotate(-45deg) translateY(-7px);
 }
-
-/* Responsive Design */
 @media (max-width: 768px) {
+  .navbar {
+    top: 10%; /* Adjust position for smaller screens */
+    padding: 0.5rem 0.5rem; /* Add some padding for mobile */
+    border-radius: 15px; /* Reduce border radius on smaller screens */
+  }
+
   .nav-content {
-    flex-direction: column; /* Stack logo and links vertically */
-    gap: 1rem;
+    flex-direction: column; /* Stack content vertically */
+    gap: 1rem; /* Reduced gap for mobile view */
+  }
+
+  .nav-logo {
+    font-size: 1.5rem; /* Smaller font size for mobile */
   }
 
   .nav-links {
-    flex-direction: column;
-    display: none; /* Hidden by default */
+    display: none; /* Hide navigation links by default */
+    flex-direction: column; /* Stack links vertically */
+    gap: 1rem; /* Reduced gap for mobile view */
+    width: 100%;
+    margin-top: 1rem; /* Add margin on top */
+  }
+
+  .nav-links li a {
+    font-size: 1rem; /* Smaller font size for links */
+    padding: 0.5rem;
+    text-align: center; /* Center align links */
   }
 
   .nav-links.active {
-    display: flex; /* Show when menu is toggled */
+    display: flex; /* Display links when hamburger is clicked */
   }
 
   .hamburger {
-    display: flex; /* Show hamburger icon on small screens */
+    display: flex; /* Show hamburger on smaller screens */
+    justify-items: center; /* Align hamburger to the right */
+  }
+
+  .register-btn {
+    width: 100%; /* Make the register button full width on mobile */
+    padding: 0.6rem 1rem; /* Adjust padding for smaller screens */
   }
 }
 
@@ -264,8 +290,8 @@ body {
   }
 }
 
-
-/* About Section */
+/* 
+About Section */
 .about-section {
   background-color: var(--primary-color);
   padding: 5rem 2rem;
@@ -300,6 +326,20 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+.brochure-img {
+  max-width: 75%; /* Restrict the image to 75% of its container width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image looks neat and centered */
+  margin: 0 auto; /* Center the image */
+}
+
+@media (max-width: 768px) {
+  .brochure-img {
+    max-width: 90%; /* Allow more room for smaller screens */
+  }
+}
+
 /* Media Query for max-width 450px */
 @media (max-width: 450px) {
   .about-content {
@@ -321,67 +361,140 @@ body {
     font-size: 1.5rem;
   }
 }
-
-.timeline-section {
-  padding: 2rem;
-  background: #1a1a1d;
-  color: #f5f5f5;
+.about-section {
+  padding: 40px;
 }
 
-.timeline-container {
+.about-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timeline {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 20px;
 }
 
-.timeline-row {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
+/* Base style for the timeline card content */
+.timeline-card {
+  background: rgba(255, 255, 255, 0.2); /* Slightly opaque background for glass effect */
+  backdrop-filter: blur(12px); /* Frosted glass effect with more intense blur */
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+  padding: 25px; /* Spacing around content */
+  border-radius: 15px; /* Rounded corners for a softer look */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Transparent white border */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
 }
 
-.row-1 {
-  flex-direction: row;
+/* Hover effect */
+.timeline-card:hover {
+  transform: scale(1.05); /* Slight bulge effect on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
+  border-color: rgba(0, 255, 255, 0.608); /* Change border to a light blue on hover */
 }
 
-.row-2 {
-  flex-direction: row-reverse;
+/* Optional: Optional text and content styling */
+
+
+/* Card title style */
+.timeline-card h3 {
+  font-size: 1.4rem; /* Larger title size */
+  font-weight: 700; /* Bolder title */
+  color: rgba(0, 255, 255, 0.608); /* Darker title color */
+  margin-bottom: 12px; /* More space below the title */
+  transition: color 0.3s ease; /* Smooth color change on hover */
 }
 
-.timeline-icon {
-  font-size: 2rem;
-  background: #4e4e50;
-  padding: 1rem;
-  border-radius: 50%;
+.timeline-card ul {
+  list-style-type: none; /* Removes default bullet points */
+  padding-left: 0; /* Remove left padding */
+  color: white; /* Light gray for list items */
+  font-size: 1rem; /* Slightly larger font for list items */
+  line-height: 1.6; /* Increased line height for better readability */
+  margin-top: 12px; /* Add space between the title and list */
 }
 
-.timeline-details {
-  max-width: 600px;
+/* Hover effect for list items */
+
+
+/* Individual list item hover effect */
+.timeline-card ul li {
+  margin-bottom: 10px; /* Add space between list items */
+  padding-left: 10px; /* Add padding for better alignment */
+  position: relative; /* For better alignment without bullet points */
 }
 
-.timeline-details h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
+/* Subtle background highlight when hovering over list items */
 
-.timeline-details span {
+
+/* Content spacing and text effects */
+.timeline-card .content {
+  margin-top: 20px; /* Spacing for additional content */
   font-size: 1rem;
-  color: #a5a5a5;
+  color: #34495e; /* Default text color */
+  line-height: 1.8; /* Increase line height for better readability */
 }
 
-.timeline-details p {
-  margin-top: 0.5rem;
-  line-height: 1.5;
+/* Smooth transition effect for the content */
+.timeline-card .content p {
+  margin-bottom: 15px; /* Space between paragraphs */
+  transition: color 0.3s ease; /* Transition for text color */
+}
+
+/* Hover effect for the entire card content */
+.timeline-card:hover .content p {
+  color: #3498db; /* Change paragraph text to blue on hover */
+}
+
+/* Extra spacing between paragraphs for better readability */
+.timeline-card .content p:last-child {
+  margin-bottom: 0; /* Remove bottom margin for last paragraph */
 }
 
 
 
+.about-image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    flex-direction: column; /* Stack the items vertically for mobile */
+    gap: 15px;
+  }
+  
+  .about-section {
+    padding: 15px; /* Smaller padding on mobile */
+  }
+  
+  .timeline-card {
+    padding: 15px; /* Smaller padding for mobile screens */
+  }
+  
+  .timeline-card h3 {
+    font-size: 1.1rem; /* Adjust the title font size for smaller screens */
+  }
+
+  .timeline-card ul li {
+    font-size: 0.9rem; /* Smaller list item font size for mobile */
+  }
+
+  .about-image img {
+    width: 100%; /* Ensure image is responsive on mobile */
+  }
+}
 /* Footer */
 .footer {
   color: #fff;
   padding: 4rem 2rem;
   text-align: center;
-  border-top: 5px solid #ffffff66;
+
 }
 
 .footer h2, .footer h3 {

@@ -4,7 +4,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 function About() {
-  const { ref, inView } = useInView({ threshold: 0.1 }); // Hook to track section visibility
+  const { ref, inView } = useInView({ threshold: 0.1 });
   const controls = useAnimation();
 
   useEffect(() => {
@@ -31,6 +31,27 @@ function About() {
     },
   };
 
+  const events = [
+    {
+      title: 'Internship Opportunities 🎓',
+      details: [
+        '🏆 Members of the top 3 teams are eligible for internship consideration.',
+        '📅 Final selection is subject to the interview process.',
+        '📝 Internship details will be communicated separately to qualified candidates.',
+      ],
+    },
+    {
+      title: 'Practizo Pro Subscription 🛠️',
+      details: [
+        '💰 One year subscription worth INR 8,999, provided to all members of the top 3 teams.',
+        '🔒 Includes access to cybersecurity courses, premium webinars, future events, and contests.',
+        '🤖 Qubira AI career chatbot tools such as AI Resume Builder, Cover Letter Generator, Research Paper Copilot, etc.',
+      ],
+    },
+    // Add more events as needed
+  ];
+  
+
   return (
     <section id="about" className="about-section" ref={ref}>
       <motion.h2
@@ -45,32 +66,27 @@ function About() {
       </motion.h2>
       <div className="about-content">
         <div className="about-grid">
-          <motion.div
-            className="about-text"
-            initial="hidden"
-            animate={controls}
-            variants={textVariants}
-          >
-            <p
-              style={{
-                color: 'rgb(252, 234, 222)',
-                fontSize: '30px',
-                fontWeight: '900',
-                fontFamily: 'Playwrite IN',
-                marginBottom: '30px',
-              }}
-            >
-              Registration Ends on 5-Feb-2025
-            </p>
-            <h1>
-              <b>The Ultimate Reward for the Winner!</b>
-            </h1>
-            The champion of this challenge will earn an exclusive internship
-            opportunity, giving them the chance to gain hands-on experience and
-            kickstart their career in a real-world environment! Don't miss out
-            on this incredible opportunity—take the first step towards your
-            dream role and get rewarded for your hard work!
-          </motion.div>
+          {/* Timeline Cards */}
+          <div className="timeline">
+            {events.map((event, index) => (
+              <motion.div
+                key={index}
+                className="timeline-card bg-white shadow-md rounded-xl p-6 border border-gray-200 hover:shadow-xl hover:border-blue-500 transition-all duration-300"
+                initial="hidden"
+                animate={controls}
+                variants={textVariants}
+              >
+                <h3 className="text-xl font-semibold text-blue-600">{event.title}</h3>
+                <ul className="list-disc list-inside text-gray-600 mt-4">
+                  {event.details.map((detail, i) => (
+                    <li key={i}>{detail}</li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Image Section */}
           <motion.div
             className="about-image"
             initial="hidden"
