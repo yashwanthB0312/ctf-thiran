@@ -5,8 +5,14 @@ import { motion } from 'framer-motion';
 function Hero() {
   return (
     <header id="home" className="hero">
+      <img
+        src="../src/assets/tenor.gif"
+        alt="Cybersecurity GIF"
+        className="hero-gif"
+      />
+
       <div className="hero-overlay"></div>
-      <motion.div 
+      <motion.div
         className="hero-content"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

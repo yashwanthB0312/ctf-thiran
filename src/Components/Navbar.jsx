@@ -10,7 +10,6 @@ function Navbar() {
           <li><Link to="home" smooth={true} duration={500}>Home</Link></li>
           <li><Link to="events" smooth={true} duration={500}>Events</Link></li>
           <li><Link to="about" smooth={true} duration={500}>About</Link></li>
-          <li><Link to="contact" smooth={true} duration={500}>Contact</Link></li>
           <li>
             <a 
               href=" https://forms.gle/JEkiFUZ2KxhfyqLZA" 

@@ -3,7 +3,6 @@ import Navbar from './Components/Navbar.jsx';
 import Hero from './Components/Hero.jsx';
 import Events from './Components/Events.jsx';
 import About from './Components/About.jsx';
-import Contact from './Components/Contact.jsx';
 import Footer from './Components/Footer.jsx';
 import './App.css';
 
@@ -14,7 +13,6 @@ function App() {
       <Hero />
       <Events />
       <About />
-      <Contact />
       <Footer />
     </div>
   );
