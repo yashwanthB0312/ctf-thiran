@@ -319,36 +319,112 @@ body {
 
 /* Footer */
 .footer {
-  padding: 2rem 1rem;
-  background-color: var(--primary-color);
+  color: #fff;
+  padding: 4rem 2rem;
   text-align: center;
-  color: var(--white);
+  border-top: 5px solid #ffffff66;
 }
 
-.footer-contacts {
-  text-align: left; /* Align the contact section to the left */
-  margin-top: 1rem;
+.footer h2, .footer h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact-boxes {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Ensure the content is aligned to the left */
-  margin-left: 2rem; /* Add some margin to the left for spacing */
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 2rem;
 }
 
-.footer-contacts ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+.contact-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  width: 250px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-.footer-contacts li {
-  margin: 0.5rem 0;
+.contact-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
 }
 
-.footer-contacts a {
-  color: var(--secondary-color); /* Color for the phone links */
+.contact-box strong {
+  display: block;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  /* color: #3498db; */
+  color: rgb(181, 178, 178);
+}
+
+.contact-box p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+
+.contact-box a {
+  color: #f0f0f0;
   text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
-.footer-contacts a:hover {
-  text-decoration: underline;
+.contact-box a:hover {
+  color: #3498db;
+}
+
+.footer-socials {
+  margin-top: 3rem;
+}
+
+.footer-socials h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0;
+}
+
+.social-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+  color: #3498db;
+}
+
+footer p {
+  font-size: 1rem;
+  margin-top: 2rem;
+  font-weight: 500;
+  color: #ccc;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .contact-boxes {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .contact-box {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
