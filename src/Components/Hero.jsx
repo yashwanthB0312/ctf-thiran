@@ -6,7 +6,7 @@ function Hero() {
   return (
     <header id="home" className="hero">
       <img
-        src="../src/assets/tenor.gif"
+        src="https://c.tenor.com/-SV9TjUGabMAAAAd/tenor.gif"
         alt="Cybersecurity GIF"
         className="hero-gif"
       />
