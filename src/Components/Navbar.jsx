@@ -7,7 +7,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="nav-content">
-        <h1 className="nav-logo">CTF Events</h1>
+        <h1 className="nav-logo">CTF Quest</h1>
         <ul className={`nav-links ${isMenuOpen ? "active" : ""}`}>
           <li>
             <Link to="home" smooth={true} duration={500}>
