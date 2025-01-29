@@ -2,10 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap');
 
 :root {
-  --primary-color: #1a2a2a; /* Dark Green (Cybersecurity theme) */
-  --secondary-color: #007a33; /* Cybersecurity green */
-  --text-color: #e0e0e0; /* Light gray for text */
-  --background-color: #121212; /* Dark background for the overall theme */
+  --primary-color: #1a2a2a; 
+  --secondary-color: #007a33; 
+  --text-color: #e0e0e0; 
+  --background-color: #121212; 
   --white: #ffffff;
 }
 
@@ -22,26 +22,24 @@ body {
   background-color: var(--background-color);
 }
 
-/* Navbar */
-/* Transparent Floating Navigation Bar */
 .navbar {
   position: fixed;
   top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
-  backdrop-filter: blur(10px); /* Apply blur effect */
-  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  background: rgba(255, 255, 255, 0.3); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); 
   padding: 0.4rem 1rem;
-  border-radius: 25px; /* Rounded corners */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Optional border */
+  border-radius: 25px; 
+  border: 1px solid rgba(255, 255, 255, 0.2); 
   z-index: 1000;
 }
 
 .nav-content {
   display: flex;
   align-items: center;
-  gap: 2rem; /* Spacing between the logo and links */
+  gap: 2rem; 
 }
 
 .nav-logo {
@@ -50,13 +48,13 @@ body {
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 2px;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle text shadow for contrast */
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 2rem; /* Space between the links */
+  gap: 2rem; 
   padding: 0;
   margin: 0;
 }
@@ -67,19 +65,18 @@ body {
   text-decoration: none;
   font-weight: 500;
   padding: 0.5rem 1rem;
-  border-radius: 20px; /* Rounded corners */
-  transition: all 0.3s ease; /* Smooth transitions for color and background */
-  cursor: pointer; /* Add pointer cursor */
+  border-radius: 20px; 
+  transition: all 0.3s ease; 
+  cursor: pointer; 
 }
 
 .nav-links li a:hover {
-  background: #fff; /* White background on hover */
-  color: #000; /* Text color changes to black */
-  font-weight: bold; /* Make the text bolder */
-  transform: scale(1.1); /* Slight enlargement on hover */
+  background: #fff; 
+  color: #000; 
+  font-weight: bold; 
+  transform: scale(1.1); 
 }
 
-/* Register Button */
 .register-btn {
   background: #2f85e7;
   padding: 0.7rem 1.5rem;
@@ -89,7 +86,7 @@ body {
   text-decoration: none;
   font-weight: bold;
   transition: background 0.3s, transform 0.3s;
-  cursor: pointer; /* Add pointer cursor */
+  cursor: pointer; 
 }
 
 .register-btn:hover {
@@ -97,11 +94,10 @@ body {
   transform: scale(1.1);
 }
 
-/* Hamburger Icon */
 .hamburger {
-  display: none; /* Hidden by default for large screens */
+  display: none; 
   flex-direction: column;
-  cursor: pointer; /* Add pointer cursor */
+  cursor: pointer; 
 }
 
 .hamburger .line {
@@ -125,50 +121,49 @@ body {
 }
 @media (max-width: 768px) {
   .navbar {
-    top: 10%; /* Adjust position for smaller screens */
-    padding: 0.5rem 0.5rem; /* Add some padding for mobile */
-    border-radius: 15px; /* Reduce border radius on smaller screens */
+    top: 10%; 
+    padding: 0.5rem 0.5rem; 
+    border-radius: 15px; 
   }
 
   .nav-content {
-    flex-direction: column; /* Stack content vertically */
-    gap: 1rem; /* Reduced gap for mobile view */
+    flex-direction: column; 
+    gap: 1rem; 
   }
 
   .nav-logo {
-    font-size: 1.5rem; /* Smaller font size for mobile */
+    font-size: 1.5rem; 
   }
 
   .nav-links {
-    display: none; /* Hide navigation links by default */
-    flex-direction: column; /* Stack links vertically */
-    gap: 1rem; /* Reduced gap for mobile view */
+    display: none; 
+    flex-direction: column; 
+    gap: 1rem; 
     width: 100%;
-    margin-top: 1rem; /* Add margin on top */
+    margin-top: 1rem; 
   }
 
   .nav-links li a {
-    font-size: 1rem; /* Smaller font size for links */
+    font-size: 1rem; 
     padding: 0.5rem;
-    text-align: center; /* Center align links */
+    text-align: center; 
   }
 
   .nav-links.active {
-    display: flex; /* Display links when hamburger is clicked */
+    display: flex; 
   }
 
   .hamburger {
-    display: flex; /* Show hamburger on smaller screens */
-    justify-items: center; /* Align hamburger to the right */
+    display: flex; 
+    justify-items: center; 
   }
 
   .register-btn {
-    width: 100%; /* Make the register button full width on mobile */
-    padding: 0.6rem 1rem; /* Adjust padding for smaller screens */
+    width: 100%; 
+    padding: 0.6rem 1rem; 
   }
 }
 
-/* Hero Section */
 .hero {
   height: 100vh;
   position: relative;
@@ -183,7 +178,7 @@ body {
 .hero-gif {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the GIF fills the hero section */
+  object-fit: cover; 
   position: absolute;
   top: 0;
   left: 0;
@@ -196,13 +191,13 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.393), rgba(0, 0, 0, 0.404)); /* Dark green overlay */
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.393), rgba(0, 0, 0, 0.404)); 
   z-index: 1;
 }
 
 .hero-content {
   position: relative;
-  z-index: 2; /* Ensures content appears above the overlay */
+  z-index: 2; 
   padding: 2rem;
 }
 
@@ -233,7 +228,6 @@ body {
   transform: translateY(-2px);
 }
 
-/* Events Section */
 .events-section {
   padding: 5rem 2rem;
   max-width: 1200px;
@@ -248,9 +242,9 @@ body {
 
 .events-grid {
   display: flex;
-  justify-content: center; /* Centers the cards horizontally */
+  justify-content: center; 
   gap: 2rem; 
-  flex-wrap: wrap; /* Allows the cards to wrap onto the next line if necessary */
+  flex-wrap: wrap; 
 }
 
 .event-card {
@@ -259,7 +253,7 @@ body {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  background-color: var(--primary-color); /* Dark theme background */
+  background-color: var(--primary-color); 
   transition: 0.5s;
 }
 
@@ -280,18 +274,16 @@ body {
 }
 
 .event-card h3 {
-  color: var(--secondary-color); /* Green color for titles */
+  color: var(--secondary-color); 
   margin-bottom: 1rem;
 }
-/* Media query for smaller screens */
+
 @media (max-width: 768px) {
   .events-grid {
-    flex-direction: column; /* Stack cards vertically on smaller screens */
+    flex-direction: column; 
   }
 }
 
-/* 
-About Section */
 .about-section {
   background-color: var(--primary-color);
   padding: 5rem 2rem;
@@ -328,19 +320,18 @@ About Section */
 }
 
 .brochure-img {
-  max-width: 75%; /* Restrict the image to 75% of its container width */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Ensure the image looks neat and centered */
-  margin: 0 auto; /* Center the image */
+  max-width: 75%; 
+  height: auto; 
+  object-fit: cover; 
+  margin: 0 auto; 
 }
 
 @media (max-width: 768px) {
   .brochure-img {
-    max-width: 90%; /* Allow more room for smaller screens */
+    max-width: 90%; 
   }
 }
 
-/* Media Query for max-width 450px */
 @media (max-width: 450px) {
   .about-content {
     display: flex;
@@ -350,7 +341,7 @@ About Section */
   .about-grid {
     display: flex;
     flex-direction: column-reverse;
-    gap: 2rem; /* Reduced gap for smaller screens */
+    gap: 2rem; 
   }
 
   .about-text, .about-image {
@@ -379,81 +370,64 @@ About Section */
   gap: 20px;
 }
 
-/* Base style for the timeline card content */
 .timeline-card {
-  background: rgba(255, 255, 255, 0.2); /* Slightly opaque background for glass effect */
-  backdrop-filter: blur(12px); /* Frosted glass effect with more intense blur */
-  -webkit-backdrop-filter: blur(12px); /* Safari support */
-  padding: 25px; /* Spacing around content */
-  border-radius: 15px; /* Rounded corners for a softer look */
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Transparent white border */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+  background: rgba(255, 255, 255, 0.2); 
+  backdrop-filter: blur(12px); 
+  -webkit-backdrop-filter: blur(12px); 
+  padding: 25px; 
+  border-radius: 15px; 
+  border: 1px solid rgba(255, 255, 255, 0.3); 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; 
 }
 
-/* Hover effect */
 .timeline-card:hover {
-  transform: scale(1.05); /* Slight bulge effect on hover */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
-  border-color: rgba(0, 255, 255, 0.608); /* Change border to a light blue on hover */
+  transform: scale(1.05); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+  border-color: rgba(0, 255, 255, 0.608); 
 }
 
-/* Optional: Optional text and content styling */
-
-
-/* Card title style */
 .timeline-card h3 {
-  font-size: 1.4rem; /* Larger title size */
-  font-weight: 700; /* Bolder title */
-  color: rgba(0, 255, 255, 0.608); /* Darker title color */
-  margin-bottom: 12px; /* More space below the title */
-  transition: color 0.3s ease; /* Smooth color change on hover */
+  font-size: 1.4rem; 
+  font-weight: 700; 
+  color: rgba(0, 255, 255, 0.608); 
+  margin-bottom: 12px; 
+  transition: color 0.3s ease; 
 }
 
 .timeline-card ul {
-  list-style-type: none; /* Removes default bullet points */
-  padding-left: 0; /* Remove left padding */
-  color: white; /* Light gray for list items */
-  font-size: 1rem; /* Slightly larger font for list items */
-  line-height: 1.6; /* Increased line height for better readability */
-  margin-top: 12px; /* Add space between the title and list */
+  list-style-type: none; 
+  padding-left: 0; 
+  color: white; 
+  font-size: 1rem; 
+  line-height: 1.6; 
+  margin-top: 12px; 
 }
 
-/* Hover effect for list items */
-
-
-/* Individual list item hover effect */
 .timeline-card ul li {
-  margin-bottom: 10px; /* Add space between list items */
-  padding-left: 10px; /* Add padding for better alignment */
-  position: relative; /* For better alignment without bullet points */
+  margin-bottom: 10px; 
+  padding-left: 10px; 
+  position: relative; 
 }
 
-/* Subtle background highlight when hovering over list items */
-
-
-/* Content spacing and text effects */
 .timeline-card .content {
-  margin-top: 20px; /* Spacing for additional content */
+  margin-top: 20px; 
   font-size: 1rem;
-  color: #34495e; /* Default text color */
-  line-height: 1.8; /* Increase line height for better readability */
+  color: #34495e;
+  line-height: 1.8; 
 }
 
-/* Smooth transition effect for the content */
 .timeline-card .content p {
-  margin-bottom: 15px; /* Space between paragraphs */
-  transition: color 0.3s ease; /* Transition for text color */
+  margin-bottom: 15px; 
+  transition: color 0.3s ease; 
 }
 
-/* Hover effect for the entire card content */
 .timeline-card:hover .content p {
-  color: #3498db; /* Change paragraph text to blue on hover */
+  color: #3498db; 
 }
 
-/* Extra spacing between paragraphs for better readability */
 .timeline-card .content p:last-child {
-  margin-bottom: 0; /* Remove bottom margin for last paragraph */
+  margin-bottom: 0; 
 }
 
 
@@ -465,28 +439,28 @@ About Section */
 
 @media (max-width: 768px) {
   .about-grid {
-    flex-direction: column; /* Stack the items vertically for mobile */
+    flex-direction: column; 
     gap: 15px;
   }
   
   .about-section {
-    padding: 15px; /* Smaller padding on mobile */
+    padding: 15px; 
   }
   
   .timeline-card {
-    padding: 15px; /* Smaller padding for mobile screens */
+    padding: 15px; 
   }
   
   .timeline-card h3 {
-    font-size: 1.1rem; /* Adjust the title font size for smaller screens */
+    font-size: 1.1rem; 
   }
 
   .timeline-card ul li {
-    font-size: 0.9rem; /* Smaller list item font size for mobile */
+    font-size: 0.9rem; 
   }
 
   .about-image img {
-    width: 100%; /* Ensure image is responsive on mobile */
+    width: 100%;
   }
 }
 /* Footer */
@@ -588,7 +562,6 @@ footer p {
   color: #ccc;
 }
 
-/* Mobile responsiveness */
 @media (max-width: 768px) {
   .contact-boxes {
     flex-direction: column;

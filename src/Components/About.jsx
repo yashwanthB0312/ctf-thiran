@@ -48,7 +48,6 @@ function About() {
         '🤖 Qubira AI career chatbot tools such as AI Resume Builder, Cover Letter Generator, Research Paper Copilot, etc.',
       ],
     },
-    // Add more events as needed
   ];
   
 
@@ -66,7 +65,6 @@ function About() {
       </motion.h2>
       <div className="about-content">
         <div className="about-grid">
-          {/* Timeline Cards */}
           <div className="timeline">
             {events.map((event, index) => (
               <motion.div
@@ -85,8 +83,6 @@ function About() {
               </motion.div>
             ))}
           </div>
-
-          {/* Image Section */}
           <motion.div
             className="about-image"
             initial="hidden"

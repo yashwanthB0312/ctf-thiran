@@ -35,8 +35,6 @@ function Navbar() {
             </a>
           </li>
         </ul>
-
-        {/* Hamburger Icon */}
         <div className="hamburger" onClick={() => setMenuOpen(!isMenuOpen)}>
           <div className={`line ${isMenuOpen ? "active" : ""}`}></div>
           <div className={`line ${isMenuOpen ? "active" : ""}`}></div>
